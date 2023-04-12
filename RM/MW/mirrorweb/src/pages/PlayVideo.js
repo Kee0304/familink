@@ -29,7 +29,7 @@ const PlayVideo = () => {
     useEffect(() => {
         axios({
             method:'GET',
-            url:`http://i8a208.p.ssafy.io:3000/movie/${nowVideoList[nowplaying]}`,
+            url:`비디오 url`,
             responseType:'blob',
             headers: {
                 'Authorization': `Bearer ${memacctoken}`
@@ -39,8 +39,9 @@ const PlayVideo = () => {
             const url = window.URL.createObjectURL(new Blob([res.data], { type: res.headers['content-type'] } ));
             setVideoData(url)
             axios({
+              // PUT으로 요청 보내면 읽기 완료 처리
                 method: "PUT",
-                url: `http://i8a208.p.ssafy.io:3000/movie/${videoList[nowplaying]}`,
+                url: `비디오 url`,
                 headers: {
                     'Authorization': `Bearer ${memacctoken}`
                 }
@@ -62,7 +63,7 @@ const PlayVideo = () => {
         if (ssecond === true) {
             axios({
                 method: "get",
-                url: `http://i8a208.p.ssafy.io:3000/movie/video-list`,
+                url: `비디오리스트 url`,
                 headers: {
                   "Authorization": `Bearer ${memacctoken}`
                 }

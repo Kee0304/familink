@@ -10,7 +10,7 @@ import { setVideos } from "../modules/valid";
 function SEE() {
   const location = useLocation();
   const Navigate = useNavigate();
-  const BASE_URL = "http://i8a208.p.ssafy.io:3000/sse"
+  const BASE_URL = "SSE 주소"
   const {memactoken, me} = useSelector(state => ({
     me : state.valid.me,
     memactoken : state.valid.memberAccessToken
