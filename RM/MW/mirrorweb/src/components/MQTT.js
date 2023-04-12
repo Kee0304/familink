@@ -89,7 +89,7 @@ function MQTT() {
         // 어카운트 요청 보내기
         axios({
           method:"get",
-          url:"http://i8a208.p.ssafy.io:3000/account/auth",
+          url:"가족계정",
           headers:{
             "Authorization": `Bearer ${msg}`
           }
@@ -143,7 +143,7 @@ function MQTT() {
               const cognizedUID = memInfo[userList[0].name]
               axios({
                 method:"post",
-                url:"http://i8a208.p.ssafy.io:3000/member/login",
+                url:"멤버 로그인 url",
                 headers:{
                   "Authorization": `Bearer ${familyAccessToken}`
                 },
@@ -190,7 +190,7 @@ function MQTT() {
                   const cognizedUID = memInfo[userList[1].name]
                   axios({
                     method:"post",
-                    url:"http://i8a208.p.ssafy.io:3000/member/login",
+                    url:"멤버 로그인 url",
                     headers:{
                       "Authorization": `Bearer ${familyAccessToken}`
                     },
@@ -238,7 +238,7 @@ function MQTT() {
       if (me) {
         axios({
           method: "get",
-          url: `http://i8a208.p.ssafy.io:3000/movie/video-list`,
+          url: `비디오 리스트 url`,
           headers: {
             "Authorization": `Bearer ${memberAccessToken}`
           }
@@ -317,7 +317,7 @@ function MQTT() {
     } else {
       axios({
         method: "get",
-        url: `http://i8a208.p.ssafy.io:3000/account/member-list`,
+        url: `멤버 리스트 url`,
         headers: {
           "Authorization": `Bearer ${familyAccessToken}`
         }
