@@ -61,7 +61,7 @@ const FamilyMember = () => {
 
   useEffect(() => {
     if (families && fmname) {
-      axios.post(`http://i8a208.p.ssafy.io:3000/member/login/access`, {
+      axios.post(`멤버로그인 url`, {
         name:fmname.replace(/"/gi, ''),
         user_uid: families
       })
@@ -88,7 +88,7 @@ const FamilyMember = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          "http://i8a208.p.ssafy.io:3000/account/member-list",
+          "멤버 리스트 url",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -110,7 +110,7 @@ const FamilyMember = () => {
   const requests = Object.values(profile).map(({ name }) => {
     if (!photoUrls[name]) {
       axios
-        .get(`http://i8a208.p.ssafy.io:3000/photo/${name}`, {
+        .get(`멤버 프로필 사진`, {
           responseType: "blob",
           headers: {
             Authorization: `Bearer ${token}`,

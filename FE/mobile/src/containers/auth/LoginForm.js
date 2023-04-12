@@ -57,7 +57,7 @@ const LoginForm = ({ history }) => {
       }
       
       //axios 요청
-      axios.post('http://i8a208.p.ssafy.io:3000/account/login', {
+      axios.post('가족계정 로그인 url', {
         email: email,
         pw: pw,
       }).then((res) => {

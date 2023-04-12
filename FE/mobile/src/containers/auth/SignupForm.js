@@ -67,7 +67,7 @@ const SignupForm = ({ history }) => {
     dispatch(signup({ email, pw, nickname, address, phone }));
 
     //axios 요청
-    axios.post('http://i8a208.p.ssafy.io:3000/account/signup', {
+    axios.post('가족 계정 회원가입 url', {
       email: email,
       pw: pw,
       nickname: nickname,

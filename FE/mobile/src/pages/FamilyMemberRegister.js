@@ -31,7 +31,7 @@ const FamilyMemberRegister = () => {
   function handleApi() {
     const formData = new FormData()
     formData.append('image', image )
-    axios.post('http://i8a208.p.ssafy.io:3000/member/signup', formData).then((res) => {
+    axios.post('멤버 추가 url', formData).then((res) => {
     })
   }
 
